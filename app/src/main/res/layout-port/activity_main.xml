@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <LinearLayout
+        android:id="@+id/l1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        >
+        <EditText
+            android:id="@+id/search_box"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toStartOf="@+id/search"
+            app:layout_constraintTop_toTopOf="parent"
+            android:hint="@string/input"
+            android:autofillHints=""
+            android:inputType="" />
+        <Button
+            android:id="@+id/search"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:text="@string/search"
+            />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/search_box"
+            />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/l1"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints">
+        <fragment
+            android:id="@+id/wordsList"
+            android:layout_width="150dp"
+            android:layout_height="match_parent"
+            android:name="com.example.dictionary1.ItemFragment"
+            app:layout_constraintEnd_toStartOf="@+id/wordDetail"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            tools:layout="@layout/fragment_item_list" />
+        <fragment
+            android:id="@+id/wordDetail"
+            android:layout_width="250dp"
+            android:layout_height="match_parent"
+            android:name="com.example.dictionary1.DetailFragment"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/wordsList"
+            app:layout_constraintHorizontal_weight="2"
+            app:layout_constraintEnd_toEndOf="parent"
+
+            tools:layout="@layout/fragment_detail" />
+
+    </LinearLayout>
+
+
+
+</android.support.constraint.ConstraintLayout>
