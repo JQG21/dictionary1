@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TableRow tools:ignore="UselessParent">
+
+        <TextView android:text="@string/input" />
+
+        <EditText
+            android:id="@+id/txtSearchWord"
+            android:layout_width="match_parent"
+            android:autofillHints=""
+            android:inputType=""
+            tools:ignore="LabelFor" />
+    </TableRow>
+
+</TableLayout>

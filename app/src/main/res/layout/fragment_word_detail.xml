@@ -9,27 +9,27 @@
     <!-- TODO: Update blank fragment layout -->
 
     <TextView
-        android:id="@+id/textviewId"
+        android:id="@+id/Id"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/id"
         />
     <TextView
-        android:id="@+id/textviewWord"
+        android:id="@+id/word"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
         android:hint="@string/word"
         />
     <TextView
-        android:id="@+id/textviewMeaning"
+        android:id="@+id/meaning"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="80dp"
         android:hint="@string/meaning"
         />
     <TextView
-        android:id="@+id/textviewSample"
+        android:id="@+id/sample"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="120dp"
