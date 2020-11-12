@@ -20,12 +20,14 @@ public class WordsDB {
     //采用单例模式
     private static final WordsDB instance=new WordsDB();
     public static WordsDB getWordsDB(){
+        System.out.println("运行WordsDB getWordsDB()");
         return WordsDB.instance;
     }
 
     private WordsDB() {
         if (mDbHelper == null) {
             mDbHelper = new WordsDBHelper(WordsApplication.getContext());
+            System.out.println("新建数据库第二步");
         }
     }
     public void close() {

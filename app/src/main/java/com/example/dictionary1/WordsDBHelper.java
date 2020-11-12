@@ -7,7 +7,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 import com.example.dictionary1.word.Words;
 
 public class WordsDBHelper extends SQLiteOpenHelper {
-    private final static String DATABASE_NAME = "wordsdb";//数据库名字
+    private final static String DATABASE_NAME = "words.db";//数据库名字
     private final static int DATABASE_VERSION = 1;//数据库版本
 
 
@@ -27,7 +27,6 @@ public class WordsDBHelper extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
         //创建数据库
         sqLiteDatabase.execSQL(SQL_CREATE_DATABASE);
-        System.out.println("新建数据库");
     }
 
     @Override

@@ -45,6 +45,7 @@ public class MainActivity extends AppCompatActivity
         insert.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                System.out.println("点击添加：");
                 InsertDialog();
             }
         });
@@ -115,6 +116,7 @@ public class MainActivity extends AppCompatActivity
 
     //新增对话框
     private void InsertDialog() {
+        System.out.println("运行InsertDialog()");
         final TableLayout tableLayout = (TableLayout) getLayoutInflater().inflate(R.layout.insert, null);
         new AlertDialog.Builder(this)
                 .setTitle("新增单词")//标题
@@ -129,12 +131,14 @@ public class MainActivity extends AppCompatActivity
 
                         //既可以使用Sql语句插入，也可以使用使用insert方法插入
                         // InsertUserSql(strWord, strMeaning, strSample);
-                        WordsDB wordsDB=WordsDB.getWordsDB();
-                        wordsDB.Insert(strWord, strMeaning, strSample);
 
+                        WordsDB wordsDB=WordsDB.getWordsDB();
+                        System.out.println("运行WordsDB wordsDB=WordsDB.getWordsDB();");
+                        wordsDB.Insert(strWord, strMeaning, strSample);
+                        System.out.println("wordsDB.Insert(strWord, strMeaning, strSample);");
                         //单词已经插入到数据库，更新显示列表
                         RefreshWordItemFragment();
-
+                        System.out.println("更新显示列表");
 
                     }
                 })
@@ -147,7 +151,7 @@ public class MainActivity extends AppCompatActivity
                 })
                 .create()//创建对话框
                 .show();//显示对话框
-
+        System.out.println("显示对话框！");
 
     }
 
